@@ -5,12 +5,12 @@ select fav in "${hosts[@]}"; do
     case $fav in
         "Ultimate")
             echo "Host File"
-            curl -s https://raw.githubusercontent.com/SunilPrasadRegmi/swaccha-adblock-magisk/master/swaccha-static-adblock-filters.txt -o /etc/hosts
+            curl -s https://raw.githubusercontent.com/SunilPrasadRegmi/Swachha-Magisk/main/system/etc/hosts -o /etc/hosts
 	    echo "Successfully Updated"
             ;;
         "Unlocked")
             echo "Host File"
-	    curl -s https://raw.githubusercontent.com/SunilPrasadRegmi/swaccha-adblock-magisk/master/swaccha-static-adblock-filters.txt -o /etc/hosts
+	    curl -s https://raw.githubusercontent.com/SunilPrasadRegmi/Swachha-Magisk/main/system/etc/hosts -o /etc/hosts
 	    echo "Successfully Updated"
             ;;
 	"Quit")
