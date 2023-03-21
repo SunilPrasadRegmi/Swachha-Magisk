@@ -1,0 +1,2 @@
+# Swachha-Magisk
+Magisk Module
