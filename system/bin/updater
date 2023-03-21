@@ -1,0 +1,22 @@
+#!/system/bin/sh
+PS3='Choose your favorite host file: '
+hosts=("Ultimate" "Unlocked" "Quit")
+select fav in "${hosts[@]}"; do
+    case $fav in
+        "Ultimate")
+            echo "Host File"
+            curl -s https://raw.githubusercontent.com/SunilPrasadRegmi/swaccha-adblock-magisk/master/swaccha-static-adblock-filters.txt -o /etc/hosts
+	    echo "Successfully Updated"
+            ;;
+        "Unlocked")
+            echo "Host File"
+	    curl -s https://raw.githubusercontent.com/SunilPrasadRegmi/swaccha-adblock-magisk/master/swaccha-static-adblock-filters.txt -o /etc/hosts
+	    echo "Successfully Updated"
+            ;;
+	"Quit")
+	    echo "User requested exit"
+	    exit
+	    ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
